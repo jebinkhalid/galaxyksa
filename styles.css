@@ -1,0 +1,317 @@
+
+
+/* Features Section Styles */
+.features-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.features-header h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.features-header p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.features-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+.cta-subtext {
+  margin-top: 15px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* RTL Support for Services Grid */
+[lang="ar"] .home-practice-areas-grid {
+  direction: rtl;
+  text-align: right;
+}
+
+[lang="ar"] .home-practice-areas-grid .card {
+  direction: rtl;
+  text-align: right;
+}
+
+[lang="ar"] .home-practice-areas-grid .practice-area-card-content {
+  text-align: right;
+}
+
+[lang="ar"] .home-practice-areas-grid .practice-area-card-content h3 {
+  text-align: right;
+}
+
+[lang="ar"] .home-practice-areas-grid .practice-area-card-content p {
+  text-align: right;
+}
+
+/* Ensure grid items flow from right to left in RTL */
+[lang="ar"] .w-layout-grid {
+  direction: rtl;
+}
+
+[lang="ar"] .w-layout-grid > * {
+  direction: ltr; /* Keep content left-to-right within each grid item */
+}
+
+/* RTL Support for Tailwind CSS Grid in services.html */
+[lang="ar"] .grid {
+  direction: rtl;
+}
+
+[lang="ar"] .grid > * {
+  direction: ltr; /* Keep content left-to-right within each grid item */
+}
+
+[lang="ar"] .grid .bg-white {
+  text-align: right;
+}
+
+[lang="ar"] .grid .bg-white h3 {
+  text-align: right;
+}
+
+[lang="ar"] .grid .bg-white p {
+  text-align: right;
+}
+
+[lang="ar"] .grid .bg-white .flex {
+  text-align: right;
+}
+
+/* RTL Support for flex items in service cards */
+[lang="ar"] .flex.items-start.space-x-3 {
+  flex-direction: row-reverse;
+}
+
+[lang="ar"] .flex.items-start.space-x-3 .flex-shrink-0 {
+  margin-left: 0;
+  margin-right: 0.75rem; /* 3 in Tailwind */
+}
+
+/* RTL Support for budget selector */
+[lang="ar"] .budget-selector {
+  text-align: right;
+}
+
+[lang="ar"] .budget-option {
+  text-align: center;
+}
+
+/* RTL Support for price slider */
+[lang="ar"] .flex.justify-between.items-center {
+  flex-direction: row-reverse;
+}
+
+[lang="ar"] .text-center {
+  text-align: center;
+}
+
+/* RTL Support for case results grid */
+[lang="ar"] .home-case-results-grid {
+  direction: rtl;
+}
+
+[lang="ar"] .home-case-results-grid > * {
+  direction: ltr; /* Keep content left-to-right within each grid item */
+}
+
+[lang="ar"] .home-case-results-grid .case-result-card-content {
+  text-align: right;
+}
+
+[lang="ar"] .home-case-results-grid .case-result-card-content h3 {
+  text-align: right;
+}
+
+[lang="ar"] .home-case-results-grid .case-result-card-content p {
+  text-align: right;
+}
+
+/* Newsletter success meta (page + url) */
+.newsletter-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  word-break: break-word;
+}
+
+[lang="ar"] .newsletter-meta {
+  text-align: right;
+}
+
+[lang="en"] .newsletter-meta {
+  text-align: left;
+}
+
+[lang="ar"] .home-case-results-grid .case-result-card-price {
+  text-align: right;
+}
+
+/* RTL Support for split content */
+[lang="ar"] .split-content.home-case-results-left {
+  text-align: right;
+}
+
+[lang="ar"] .split-content.home-case-results-left h2 {
+  text-align: right;
+}
+
+[lang="ar"] .split-content.home-case-results-left p {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-header h2 {
+    font-size: 28px;
+  }
+  
+  .features-header p {
+    font-size: 16px;
+  }
+}
+
+/* Footer Contact Info Styles */
+.contact-info {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-info .address,
+.contact-info .phone,
+.contact-info .email,
+.contact-info .phone-title,
+.contact-info .email-title {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info .phone-title,
+.contact-info .email-title {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.contact-info .phone,
+.contact-info .email {
+  direction: ltr;
+  text-align: left;
+}
+
+[lang="ar"] .contact-info .phone,
+[lang="ar"] .contact-info .email {
+  direction: rtl;
+  text-align: right;
+}
+
+.phone-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: #25D366; /* WhatsApp brand color */
+}
+
+.email-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #007bff; /* Email hover color */
+} 
+/* Always force Font Awesome icons to LTR direction, even in RTL mode */
+html[dir="rtl"] .fa,
+html[dir="rtl"] .fas,
+html[dir="rtl"] .far,
+html[dir="rtl"] .fal,
+html[dir="rtl"] .fab {
+  direction: ltr !important;
+}
+html[dir="rtl"] .fa::before,
+html[dir="rtl"] .fas::before,
+html[dir="rtl"] .far::before,
+html[dir="rtl"] .fal::before,
+html[dir="rtl"] .fab::before {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}

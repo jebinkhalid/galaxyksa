@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Nov 28 2024 19:02:36 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="lawfirmtemplate.webflow.io" data-wf-page="5ff8942ec59a3d54f232379a"
+  data-wf-site="5ff723a6a2190a08cd9e2ed2" data-wf-status="1" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function(){
+      try{
+        var saved = null;
+        try { saved = localStorage.getItem('siteLang'); } catch(e) { saved = null; }
+        var isArabic = saved ? (saved === 'ar') : true;
+        document.documentElement.lang = isArabic ? 'ar' : 'en';
+        document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+      }catch(err){}
+    })();
+  </script>
+  <style>
+    html[lang="ar"] .en:not(.lang-text) { display: none !important; }
+    html[lang="ar"] .ar:not(.lang-text) { display: inline !important; }
+    html[lang="ar"] header nav { flex-direction: row-reverse !important; }
+  </style>
+  <title>galaxy-advertising-ksa</title>
+
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome CDN (Latest Version) -->
+     <!-- Add this line in your <head> section -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="5ff723a6a2190a08cd9e2ed2/css/lawfirmtemplate.webflow.722dc906b.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script
+    type="text/javascript">WebFont.load({ google: { families: ["Playfair Display:regular", "Mulish:regular,600,700"] } });</script>
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="Assets/galaxy logo.png" rel="shortcut icon"
+    type="image/x-icon">
+  <link href="Assets/galaxy logo.png" rel="apple-touch-icon">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    .w-webflow-badge {
+      display: none !important;
+    }
+    /* Language Switch Styles */
+    .language-switch {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      justify-content: center;
+      
+      height: 100%;
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 80px;
+      height: 46px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000000;
+      transition: .4s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      
+      content: "";
+      height: 39px;
+      width: 39px;
+      left: 4px;
+      bottom: 4px;
+      
+      background-color: white;
+      transition: .4s;
+      z-index: 2;
+    }
+    
+    .lang-text {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      z-index: 1;
+    }
+    
+    .lang-text.en {
+      margin-right: 8px;
+    }
+    
+    .lang-text.ar {
+      margin-left: 8px;
+    }
+    
+    input:checked + .slider {
+      background-color: #000000;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(32px);
+    }
+    
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
+    /* RTL Support */
+    [dir="rtl"] {
+      direction: rtl;
+      text-align: right;
+    }
+    
+    [dir="rtl"] .header-navigation {
+      flex-direction: row-reverse;
+    }
+
+    /* Preserve LTR for numbers and email */
+    .preserve-ltr {
+      direction: ltr;
+      text-align: left;
+      display: inline-block;
+    }
+
+    /* Icon positioning */
+    .contact-directly-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    [dir="rtl"] .contact-directly-link {
+      flex-direction: row;
+    }
+
+    .contact-directly-icon {
+      flex-shrink: 0;
+    }
+
+    .contact-info .phone-title,
+    .contact-info .email-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    [dir="rtl"] .contact-info .phone-title i,
+    [dir="rtl"] .contact-info .email-title i {
+      order: 1;
+    }
+    /* WhatsApp Button Styles */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* Moves to left automatically if dir="rtl" is active */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Galaxy Hover Effect */
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #128C7E;
+    color: white;
+}
+
+/* Pulse Animation to grab attention */
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #25D366;
+    opacity: 0.5;
+    z-index: -1;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Tooltip style */
+.tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: #061121;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    right: 75px;
+    font-size: 14px;
+    border: 1px solid var(--galaxy-accent);
+}
+
+.whatsapp-float:hover .tooltip-text {
+    visibility: visible;
+}
+
+/* RTL Support: Moves button to left side for Arabic users */
+[dir="rtl"] .whatsapp-float {
+    right: auto;
+    left: 30px;
+}
+[dir="rtl"] .tooltip-text {
+    right: auto;
+    left: 75px;
+}
+  </style>
+  <style>
+        /* RTL spacing adjustments using attribute selectors to avoid escaped selectors */
+        [dir="rtl"] [class*="lg:pl-8"] { padding-left: 0 !important; padding-right: 2rem !important; }
+        [dir="rtl"] [class*="lg:pr-8"] { padding-right: 0 !important; padding-left: 2rem !important; }
+        [dir="rtl"] [class*="pl-2"] { padding-left: 0 !important; padding-right: .5rem !important; }
+        [dir="rtl"] [class*="pr-2"] { padding-right: 0 !important; padding-left: .5rem !important; }
+
+        /* Reverse horizontal spacing utilities used for desktop nav */
+        [dir="rtl"] [class*="space-x-6"] > * + * { margin-left: 0 !important; margin-right: 1.5rem !important; }
+
+        /* Ensure nav links align correctly */
+        [dir="rtl"] header nav a, [dir="rtl"] #mobile-menu nav a, [dir="rtl"] .nav-link { text-align: right !important; }
+
+        /* Defensive: make desktop nav row-reverse in CSS too */
+        [dir="rtl"] header nav { flex-direction: row-reverse !important; }
+
+        /* Footer quick links alignment */
+        [dir="rtl"] footer ul { text-align: right !important; }
+        /* Galaxy Theme Accents */
+/* Galaxy Advertising Color Palette */
+:root {
+    --galaxy-bg: #061121; /* Deep Space Navy */
+    --galaxy-accent: #0088cc; /* Electric Blue from your logo */
+    --galaxy-surface: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+    --galaxy-gradient: linear-gradient(180deg, #0a192f 0%, #061121 100%);
+}
+
+/* Update Contact & FAQ Card styles */
+.card.faq, .card.contact-form {
+    background: var(--galaxy-surface) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card.faq:hover {
+    border-color: var(--galaxy-accent) !important;
+    transform: translateY(-5px);
+}
+
+/* FAQ Text Colors */
+.title.faq, .title.faqs-contact {
+    color: #ffffff !important;
+}
+
+p[data-en], p[data-ar] {
+    color: #a0aec0 !important; /* Muted gray for readability */
+}
+
+/* FAQ Icon Colors - Matching the blue theme */
+.faq-icon-1, .faq-icon-2 {
+    background-color: var(--galaxy-accent) !important;
+}
+
+/* Buttons */
+.button-secondary {
+    background-color: transparent !important;
+    border: 2px solid var(--galaxy-accent) !important;
+    color: white !important;
+    border-radius: 50px !important;
+}
+
+.button-secondary:hover {
+    background-color: var(--galaxy-accent) !important;
+}
+      </style>
+  <script
+    type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+</head>
+
+<body class="bg-neutral-200">
+  <a href="https://wa.me/966539010541" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="tooltip-text en">Chat with us</span>
+    <span class="tooltip-text ar hidden">تواصل معنا</span>
+</a>
+  <div style="opacity:0" class="page-wrapper">
+    <header class="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 lg:px-8 header">
+  <div class="max-w-screen-xl mx-auto">
+<div class="flex justify-between items-center
+bg-gradient-to-r from-[#0b1c2d]/90 via-[#12344d]/90 to-[#0b1c2d]/90
+backdrop-blur-xl rounded-full px-6 py-2 sm:py-3 mt-4
+shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="./Assets/galaxy logo.png" alt="Logo" class="h-16  object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+<nav class="hidden lg:flex space-x-6 text-white font-medium">
+<a href="index.html"
+class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Home</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الرئيسية</span>
+        </a>
+        <!-- <a href="#aboutsection" class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">About</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">من نحن</span>
+        </a> -->
+        <a href="services.html"class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Services</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الخدمات</span>
+        </a>
+        <a href="work.html"class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Our Works</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">أعمالنا</span>
+        </a>
+        <a href="clients.html"class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Clients</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">عملاؤنا</span>
+        </a>
+        <!-- <a href="#vision"class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Vision</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الرؤية</span>
+        </a> -->
+        <a href="#contactpart"class="relative font-semibold text-white/90 hover:text-[#1da1f2] transition duration-300">
+          <span class="en">Contact</span>
+          <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">اتصل بنا</span>
+        </a>
+      </nav>
+
+      <!-- Desktop Right -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <div class="language-switch">
+          <label class="switch">
+            <input type="checkbox" id="languageToggle" checked>
+            <span class="slider round">
+              <span class="lang-text en absolute left-2 top-1/2 -translate-y-1/2">EN</span>
+              <span class="lang-text ar absolute right-2 top-1/2 -translate-y-1/2">AR</span>
+            </span>
+          </label>
+        </div>
+        <!-- get a quote -->
+<a href="#contactpart"
+class="text-white flex justify-center items-center font-medium
+bg-[#0b1c2d] hover:bg-[#1da1f2]
+hover:scale-105 px-5 py-2 rounded-full
+transition-all duration-300 ease-in-out w-[170px] shadow-lg">
+
+  <span class="en">Get a Quote</span>
+  <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">
+    طلب عرض سعر
+  </span>
+</a>
+
+      </div>
+
+      <!-- Mobile Right -->
+      <div class="flex items-center gap-3 lg:hidden z-50">
+        <div class="language-switch">
+          <label class="switch">
+            <input type="checkbox" id="languageToggleMobile" checked>
+            <span class="slider round">
+              <span class="lang-text en absolute left-2 top-1/2 -translate-y-1/2">EN</span>
+              <span class="lang-text ar absolute right-2 top-1/2 -translate-y-1/2">AR</span>
+            </span>
+          </label>
+        </div>
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Sidebar -->
+<div id="mobile-menu"
+class="fixed z-50 top-0 right-0 h-full w-72
+bg-gradient-to-b from-[#0b1c2d]/95 to-[#12344d]/95
+text-white backdrop-blur-lg transform translate-x-full
+transition-transform duration-300 ease-in-out flex flex-col
+p-6 space-y-6 shadow-2xl lg:hidden">
+
+  <!-- Close Icon -->
+  <button id="menu-close" class="self-end text-white text-3xl mb-4">&times;</button>
+
+  <!-- Navigation -->
+  <nav class="flex flex-col space-y-4 text-lg font-medium">
+    <a href="index.html">
+      <span class="en">Home</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الرئيسية</span>
+    </a>
+    <!-- <a href="#aboutsection">
+      <span class="en">About</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">من نحن</span>
+    </a> -->
+    <a href="services.html">
+      <span class="en">Services</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الخدمات</span>
+    </a>
+    <a href="work.html">
+      <span class="en">our Works</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">أعمالنا</span>
+    </a>
+    <a href="clients.html">
+      <span class="en">clients</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">عملاؤنا</span>
+    </a>
+<!-- <a href="#vision">
+  <span class="en">Vision</span>
+  <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">الرؤية</span>
+</a> -->
+    <a href="contact.html">
+      <span class="en">Contact</span>
+      <span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">اتصل بنا</span>
+    </a>
+  </nav>
+
+  <!-- Divider -->
+  <div class="border-t border-white/20 pt-6">
+    <!-- Language Switch -->
+    
+
+    <!-- Download Button -->
+    <a href="contact.html" class="block text-center text-white font-medium bg-black hover:bg-gray-800 px-4 py-2 rounded-full transition">
+      <span class="en">Get a Quote</span>
+<span class="ar hidden" style="font-family: 'Noto Sans Arabic', sans-serif;">
+  طلب عرض سعر
+</span>
+
+    </a>
+  </div>
+</div>
+
+    
+    <!-- JS -->
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuClose = document.getElementById('menu-close');
+    
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+      });
+    
+      menuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+      });
+    </script>
+   
+<section id="Contact" class="section contact" style="background: var(--galaxy-gradient); padding: 100px 0;">
+  <div class="container-default w-container">
+    <div class="contact-wrapper">
+      
+      <div class="split-content contact-left">
+        <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 text-[#0088cc] font-bold text-sm mb-4">
+            <span class="en">LET'S CONNECT</span>
+            <span class="ar hidden">لنتواصل معاً</span>
+        </div>
+        <h2 class="title text-4xl md:text-5xl text-white font-bold mb-6">
+            <span class="en">Ready to Elevate Your Brand?</span>
+            <span class="ar hidden">هل أنت مستعد لرفع مستوى علامتك التجارية؟</span>
+        </h2>
+        <p class="text-gray-400 text-lg mb-8 max-w-md">
+            <span class="en">Have a project in mind? Reach out to our creative team and let's turn your ideas into impactful brand experiences.</span>
+            <span class="ar hidden">لديك مشروع في قيد الدراسة؟ تواصل مع فريقنا الإبداعي ولنحول أفكارك إلى تجارب علامة تجارية مؤثرة.</span>
+        </p>
+        
+        <div class="contact-directly-links-wrapper space-y-4">
+          <a href="mailto:advertising@galaxyksa.com" class="contact-directly-link flex items-center gap-4 text-white hover:text-[#0088cc] transition">
+            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl"><i class="bi bi-envelope-fill"></i></div>
+            <div class="text-lg font-medium">advertising@galaxyksa.com</div>
+          </a>
+          <a href="tel:+966539010541" class="contact-directly-link flex items-center gap-4 text-white hover:text-[#0088cc] transition">
+            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl"><i class="bi bi-telephone-fill"></i></div>
+            <div class="text-lg font-medium">+966 53 901 0541</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="card galaxy-card p-8 md:p-10 shadow-2xl">
+        <div class="contact-form-block w-form">
+          <form id="wf-form-Contact-Form" onsubmit="sendEmail(event)">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="input-wrapper">
+                <label class="text-white/70 mb-2 block text-sm" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                <input class="galaxy-input input w-input" type="text" id="name" required placeholder="John Doe">
+              </div>
+              <div class="input-wrapper">
+                <label class="text-white/70 mb-2 block text-sm" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                <input class="galaxy-input input w-input" type="email" id="Email-2" required placeholder="john@example.com">
+              </div>
+              <div class="input-wrapper">
+                <label class="text-white/70 mb-2 block text-sm" data-en="Service Type" data-ar="نوع الخدمة">Service Type</label>
+                <select class="galaxy-input input w-select" id="Subject">
+                    <option value="Signage">Signage & Branding</option>
+                    <option value="Events">Event Management</option>
+                    <option value="Printing">Printing Solutions</option>
+                    <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <label class="text-white/70 mb-2 block text-sm" data-en="Phone" data-ar="رقم الهاتف">Phone</label>
+                <input class="galaxy-input input w-input" type="tel" id="Phone" required placeholder="+966">
+              </div>
+              <div class="md:col-span-2 input-wrapper">
+                <label class="text-white/70 mb-2 block text-sm" data-en="Your Message" data-ar="رسالتك">Your Message</label>
+                <textarea id="Message" class="galaxy-input text-area w-input" placeholder="Tell us about your project..."></textarea>
+              </div>
+              <div class="md:col-span-2">
+                <button type="submit" class="galaxy-button w-full py-4 text-black shadow-lg">
+                    <span class="en">Launch Project</span>
+                    <span class="ar hidden">ابدأ المشروع</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <footer class="bg-black text-white" id="contactpart">
+      <div class="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Brand -->
+          <div class="space-y-4">
+            <a href="index.html" class="inline-block">
+              <img src="Assets/galaxy logo.png" alt="galaxy" class="h-12">
+            </a>
+<p class="text-sm muted en">
+  Dedicated to elevating brand presence through creative excellence and strategic execution.
+</p>
+<p class="text-sm muted ar hidden" style="font-family: 'Vazirmatn', sans-serif;">
+  مكرسون لتعزيز حضور العلامات التجارية من خلال التميز الإبداعي والتنفيذ الاستراتيجي.
+</p>            <div class="mt-4">
+              <div class="w-layout-grid footer-social-media-grid flex items-center gap-3">
+                <a aria-label="WhatsApp" href="https://wa.me/966539010541" target="_blank" class="p-2 rounded bg-white/5 hover:bg-white/10 text-white transition-colors"><i class="bi bi-whatsapp"></i></a>
+                <a aria-label="Facebook" href="https://www.facebook.com/share/1JjvAMisV6/?mibextid=wwXIfr" target="_blank" class="p-2 rounded bg-white/5 hover:bg-white/10 text-white transition-colors"><i class="bi bi-facebook"></i></a>
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/company/galaxy-advertising-ksa/" target="_blank" class="p-2 rounded bg-white/5 hover:bg-white/10 text-white transition-colors"> <i class="bi bi-linkedin"></i>
+</a>                <a aria-label="Instagram" href="https://www.instagram.com/galaxyadvertising_?igsh=MThsYjJnNnBuZjM5NQ==" target="_blank" class="p-2 rounded bg-white/5 hover:bg-white/10 text-white transition-colors"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="text-sm">
+            <h3 class="font-semibold mb-3 en">Quick Links</h3>
+            <h3 class="font-semibold mb-3 ar hidden" style="font-family: 'Vazirmatn', sans-serif;">روابط سريعة</h3>
+            <ul class="space-y-2 muted">
+              <!-- <li><a href="about.html" class="hover:underline"> <span class="en">Features</span><span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">المميزات</span></a></li> -->
+              <li><a href="services.html" class="hover:underline"> <span class="en">Services</span><span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">الخدمات</span></a></li>
+              <li><a href="clients.html" class="hover:underline"> <span class="en">clients</span><span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">الباقات</span></a></li>
+              <!-- <li><a href="vision.html" class="hover:underline"> <span class="en">Blog</span><span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">المدونة</span></a></li> -->
+              <li><a href="contact.html" class="hover:underline"> <span class="en">Contact</span><span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">اتصل بنا</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Subscribe -->
+         <div class="footer-subscription-container">
+  <h3 class="font-semibold mb-3 en">Stay Inspired</h3>
+  <h3 class="font-semibold mb-3 ar hidden" style="font-family: 'Vazirmatn', sans-serif;">ابقَ ملهماً</h3>
+  
+  <p class="text-sm muted mb-4 en">Get the latest advertising trends and creative insights from Galaxy. No spam.</p>
+  <p class="text-sm muted mb-4 ar hidden" style="font-family: 'Vazirmatn', sans-serif;">احصل على أحدث اتجاهات الإعلان والأفكار الإبداعية من جالكسي. لا رسائل مزعجة.</p>
+
+<form id="footer-subscribe-form" class="flex flex-col sm:flex-row gap-3">
+    <label for="footer-email" class="sr-only">Email address</label>
+    
+    <input id="footer-email" name="email" type="email" required placeholder="you@domain.com" 
+           class="w-full sm:flex-1 px-3 py-2 rounded bg-white text-black outline-none focus:ring-2 focus:ring-[#0088cc]" />
+    
+    <button id="footer-subscribe-btn" type="submit" 
+            class="px-4 py-2 bg-[#0088cc] text-white rounded font-medium hover:bg-[#001f33] border border-[#0088cc] transition">
+      <span class="en">Subscribe</span>
+      <span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">اشترك</span>
+    </button>
+</form>
+
+  <div id="footer-subscribe-msg" class="text-sm mt-3 text-white/80"></div>
+
+  <div id="footer-subscribed-badge" class="hidden mt-3 items-center gap-2 justify-start">
+    <span class="inline-flex items-center justify-center w-8 h-8 bg-green-500 rounded-full text-white">
+      <i class="bi bi-check-lg"></i>
+    </span>
+    <span class="font-medium text-white">
+      <span class="en">Success! You're on the list.</span>
+      <span class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">نجاح! لقد تم تسجيلك.</span>
+    </span>
+  </div>
+
+  <p id="footer-subscribe-note" class="text-xs muted mt-4 en">Updates will be sent to <span class="preserve-ltr">advertising@galaxyksa.com</span></p>
+  <p id="footer-subscribe-note-ar" class="text-xs muted mt-4 ar hidden" style="font-family: 'Vazirmatn', sans-serif;">سيتم إرسال التحديثات إلى <span class="preserve-ltr">advertising@galaxyksa.com</span></p>
+</div>
+        </div>
+
+        <div class="mt-8 border-t border-white/10 pt-6 text-center text-sm text-white/70">
+  <div class="en">
+    © 2026 <span class="font-semibold text-[#0088cc]">Galaxy Advertising</span> — All rights reserved.
+  </div>
+
+  <div class="ar hidden" style="font-family: 'Vazirmatn', sans-serif;">
+    © 2026 <span class="font-semibold text-[#0088cc]">جالكسي للدعاية والإعلان</span> — جميع الحقوق محفوظة.
+  </div>
+</div>
+      </div>
+    </footer>
+
+
+
+
+    
+<script>    
+/* Replace your entire previous footer script with this */
+(function(){
+    // Initialize EmailJS with your Public Key
+    // You find this in EmailJS Dashboard > Account > Public Key
+    emailjs.init("gWGQdV1Z0PEw7JMJ5"); 
+
+    const form = document.getElementById('footer-subscribe-form');
+    const emailInput = document.getElementById('footer-email');
+    const btn = document.getElementById('footer-subscribe-btn');
+    const msg = document.getElementById('footer-subscribe-msg');
+    const badge = document.getElementById('footer-subscribed-badge');
+
+    // Detect if the user is currently looking at the Arabic version
+    function isArabicVisible(){
+        return !!document.querySelector('.ar:not(.lang-text):not(.hidden)');
+    }
+
+    const MESSAGES = {
+        en: {
+            submitting: 'Submitting...',
+            failed: 'Subscription failed. Please try again.'
+        },
+        ar: {
+            submitting: 'جاري الإرسال...',
+            failed: 'فشل الاشتراك. يرجى المحاولة مرة أخرى.'
+        }
+    };
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        // UI: Disable button and show "Submitting..."
+        btn.disabled = true;
+        btn.classList.add('opacity-70');
+        const lang = isArabicVisible() ? 'ar' : 'en';
+        msg.textContent = MESSAGES[lang].submitting;
+        msg.style.color = '#0088cc';
+
+        // Parameters for your EmailJS Template
+        const templateParams = {
+            email: email,
+            project_name: "Galaxy Advertising"
+        };
+
+        // Send via EmailJS
+        emailjs.send('service_tusvg6k', 'template_b9z2kis', templateParams)
+            .then(() => {
+                // SUCCESS: Hide form/msg and show your green badge
+                form.classList.add('hidden');
+                msg.classList.add('hidden');
+                badge.classList.remove('hidden');
+                badge.style.display = 'flex';
+            })
+            .catch((err) => {
+                // FAILED: Reset button and show error
+                console.error('EmailJS Error:', err);
+                msg.textContent = MESSAGES[lang].failed;
+                msg.style.color = '#fecaca';
+                btn.disabled = false;
+                btn.classList.remove('opacity-70');
+            });
+    });
+})();
+</script>
+    <style>
+      /* Ensure page fills viewport and footer stays at bottom (remove unexpected white gap) */
+      html, body { height: 100%; }
+      body { display: flex; flex-direction: column; min-height: 100vh; }
+      .page-wrapper { flex: 1 0 auto; }
+      footer { flex-shrink: 0; }
+      /* make sure footer icons remain visible on hover and text doesn't match background */
+      footer a { color: inherit; }
+      footer a:hover { color: #fff; }
+      /* remove bottom padding so footer sits flush with viewport bottom */
+      footer { padding-bottom: 0; }
+    </style>
+  </div>
+  
+  <script src="js/jquery-3.5.1.min.dc5e7f18c8.js?site=5ff723a6a2190a08cd9e2ed2" type="text/javascript"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="5ff723a6a2190a08cd9e2ed2/js/webflow.582146835.js" type="text/javascript"></script>
+  <script src="js/language-switch.js" type="text/javascript"></script>
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('Email-2').value;
+      const phone = document.getElementById('Phone').value;
+      const subject = document.getElementById('Subject').value;
+      const message = document.getElementById('Message').value;
+      
+      const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+      
+      const whatsappLink = `https://wa.me/966539010541?text=${whatsappMessage}`;
+      
+      window.open(whatsappLink, '_blank');
+    }
+  </script>
+    <script>
+      // Language switching functionality
+      (function(){
+        const englishElements = () => document.querySelectorAll('.en:not(.lang-text)');
+        const arabicElements = () => document.querySelectorAll('.ar:not(.lang-text)');
+
+        function applyNavDirection(isArabic) {
+          // set document language and direction
+          document.documentElement.lang = isArabic ? 'ar' : 'en';
+          document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+
+          // Header / desktop nav
+          const headerNavs = document.querySelectorAll('header nav');
+          headerNavs.forEach(nav => {
+            const style = nav.style;
+            const isColumn = nav.classList.contains('flex-col') || getComputedStyle(nav).flexDirection.indexOf('column') !== -1;
+            if (isColumn) {
+              // vertical list: align items to the right in Arabic, left in English
+              style.flexDirection = 'column';
+              style.alignItems = isArabic ? 'flex-end' : 'flex-start';
+            } else {
+              // horizontal list: reverse order for Arabic
+              style.flexDirection = isArabic ? 'row-reverse' : 'row';
+            }
+          });
+
+          // Mobile sidebar nav
+          const mobileNav = document.querySelector('#mobile-menu nav');
+          if (mobileNav) {
+            // keep vertical order but align text and items
+            mobileNav.style.alignItems = isArabic ? 'flex-end' : 'flex-start';
+          }
+
+          // Footer quick links alignment
+          document.querySelectorAll('footer ul, footer .w-layout-grid').forEach(el => {
+            try {
+              el.style.textAlign = isArabic ? 'right' : 'left';
+            } catch (e) {}
+          });
+
+          // Individual link alignment
+          document.querySelectorAll('.nav-link, #mobile-menu nav a, footer ul a').forEach(a => {
+            a.style.textAlign = isArabic ? 'right' : 'left';
+          });
+
+          // FAQs contact section direction switch
+          const faqsContact = document.querySelector('.container-medium-600px.faqs');
+          if (faqsContact) {
+            faqsContact.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+            faqsContact.style.textAlign = isArabic ? 'right' : 'left';
+          }
+
+          // Contact form submit button
+          const submitBtn = document.getElementById('w-node-_0e3cef8f-0e72-6dec-ad4e-34acca70a24f-f232379a');
+          if (submitBtn) {
+            submitBtn.value = isArabic ? (submitBtn.getAttribute('data-ar') || 'إرسال الرسالة') : (submitBtn.getAttribute('data-en') || 'Send Message');
+          }
+        }
+
+        function toggleLanguage(isArabic) {
+          // show/hide bilingual spans across page
+          Array.from(englishElements()).forEach(el => el.classList.toggle('hidden', isArabic));
+          Array.from(arabicElements()).forEach(el => el.classList.toggle('hidden', !isArabic));
+
+          // toggle the small language slider labels
+          document.querySelectorAll('.lang-text.en').forEach(el => el.classList.toggle('hidden', isArabic === false));
+          document.querySelectorAll('.lang-text.ar').forEach(el => el.classList.toggle('hidden', isArabic === true));
+
+          // nav + doc direction
+          applyNavDirection(isArabic);
+
+          // persist preference
+          try { localStorage.setItem('siteLang', isArabic ? 'ar' : 'en'); } catch (e) {}
+        }
+
+        // set initial language from localStorage or default to Arabic
+        document.addEventListener('DOMContentLoaded', () => {
+          const saved = (function(){ try { return localStorage.getItem('siteLang'); } catch(e){ return null; }})();
+          const isArabic = saved ? (saved === 'ar') : true; // default Arabic as original file used
+
+          // sync toggle inputs
+          const desktopToggle = document.getElementById('languageToggle');
+          const mobileToggle = document.getElementById('languageToggleMobile');
+          if (desktopToggle) desktopToggle.checked = isArabic;
+          if (mobileToggle) mobileToggle.checked = isArabic;
+
+          toggleLanguage(isArabic);
+        });
+
+        // Desktop language toggle
+        const languageToggle = document.getElementById('languageToggle');
+        if (languageToggle) languageToggle.addEventListener('change', (e) => {
+          // both toggles should stay in sync
+          const isArabic = !!e.target.checked;
+          const other = document.getElementById('languageToggleMobile');
+          if (other) other.checked = isArabic;
+          toggleLanguage(isArabic);
+        });
+
+        // Mobile language toggle
+        const languageToggleMobile = document.getElementById('languageToggleMobile');
+        if (languageToggleMobile) languageToggleMobile.addEventListener('change', (e) => {
+          const isArabic = !!e.target.checked;
+          const other = document.getElementById('languageToggle');
+          if (other) other.checked = isArabic;
+          toggleLanguage(isArabic);
+        });
+      })();
+    </script>
+</body>
+
+</html>

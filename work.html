@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Galaxy Advertising</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --galaxy-bg: #061121;
+            --galaxy-accent: #0088cc;
+            --galaxy-gradient: linear-gradient(135deg, #0a192f 0%, #061121 100%);
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--galaxy-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .coming-soon-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        /* Animated Icon Wrapper */
+        .icon-box {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--galaxy-accent);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 50px;
+            color: var(--galaxy-accent);
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #a0aec0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            background: var(--galaxy-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
+        }
+
+        /* Language Support */
+        .hidden { display: none; }
+        [dir="rtl"] .title { font-family: 'Vazirmatn', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <div class="coming-soon-container">
+        <div class="icon-box">
+            <i class="bi bi-rocket-takeoff"></i>
+        </div>
+
+        <h1 class="title">
+            <span class="en">Launching Soon</span>
+            <span class="ar hidden">سيتم الإطلاق قريباً</span>
+        </h1>
+
+        <p class="subtitle">
+            <span class="en">Our portfolio is currently being curated to showcase the galaxy of brands we've helped elevate. Stay tuned for our latest projects.</span>
+            <span class="ar hidden">نحن نقوم حالياً بتجهيز معرض أعمالنا لنعرض لكم مجموعة العلامات التجارية التي ساهمنا في رفع مستواها. ابقوا بالقرب لمشاهدة أحدث مشاريعنا.</span>
+        </p>
+
+        <a href="index.html" class="btn-back">
+            <i class="bi bi-arrow-left"></i>
+            <span class="en">Back to Home</span>
+            <span class="ar hidden">العودة للرئيسية</span>
+        </a>
+    </div>
+
+    <script>
+        // Simple script to check your existing language preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLang') || 'en';
+            const isArabic = savedLang === 'ar';
+            
+            if (isArabic) {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+                document.querySelectorAll('.en').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.ar').forEach(el => el.classList.remove('hidden'));
+            }
+        });
+    </script>
+</body>
+</html>
