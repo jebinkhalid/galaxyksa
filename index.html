@@ -426,6 +426,22 @@
     right: auto;
     left: 75px;
 }
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for the Hero/About section images */
+.angled-shape img {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent the "Flash of Black" on mobile */
+.bg-slate-900 {
+  background-color: #f3f4f6 !important; /* Change to light gray */
+}
 
   </style>
   <style>
@@ -677,30 +693,20 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
       </div>
 
       <!-- Right Content -->
- <div class="relative lg:pl-8 flex justify-end">
-  <div class="relative w-full max-w-[520px] h-[560px]">
+<div class="relative lg:pl-8 flex justify-end">
+  <div class="relative w-full max-w-[520px] aspect-[4/5] md:h-[560px]">
 
-    <!-- Sky-blue angled border (modern depth) -->
-    <div
-      class="absolute inset-0 angled-shape
-             bg-[#87CEEB]
-             shadow-[0_20px_60px_rgba(135,206,235,0.45)]">
+    <div class="absolute inset-0 angled-shape bg-[#87CEEB] shadow-[0_20px_60px_rgba(135,206,235,0.45)]"></div>
+
+    <div class="absolute inset-[8px] angled-shape overflow-hidden bg-slate-200"> <img
+  src="Assets/empty-billboard-metropolis-city.jpg"
+  alt="Galaxy Advertising Preview"
+  loading="eager"
+  fetchpriority="high"
+  class="w-full h-full object-cover scale-[1.03]"
+  style="content-visibility: auto; rendering-intent: relative-colorimetric;"
+/>
     </div>
-
-    <!-- Image container -->
-    <div
-      class="absolute inset-[8px] angled-shape
-             overflow-hidden
-             bg-slate-900">
-
-      <img
-        src="Assets/empty-billboard-metropolis-city.jpg"
-        alt="Galaxy Advertising Preview"
-        class="w-full h-full object-cover
-               scale-[1.03]"
-      />
-    </div>
-
   </div>
 </div>
 
@@ -732,67 +738,63 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
   </script>
     
     
- <section class="home-about-us pt-5 lg:pt-8">
+ <section id="about-us" class="home-about-us pt-5 lg:pt-8" style="opacity: 1 !important; display: block !important;">
   <div class="container-default w-container">
-    <div class="home-about-us-wrapper">
+    <div class="home-about-us-wrapper" style="opacity: 1 !important; transform: none !important;">
 
-      <!-- Left Image -->
-      <div data-w-id="42aa54da-09d1-49c2-3915-e449700ac32b"
-        style="-webkit-transform:translate3d(0,0,0) scale3d(0.97,0.97,1);opacity:0"
-        class="image-wrapper home-about-us">
-
+      <div class="image-wrapper home-about-us" style="opacity: 1 !important; transform: none !important;">
         <img
           src="Assets/digital-art-inmersive-exhibition.jpg"
           alt="Galaxy Advertising"
-          sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, 700px"
-          class="image home-about-us">
+          loading="eager" 
+          fetchpriority="high"
+          class="image home-about-us"
+          style="opacity: 1 !important;">
+        </div>
 
-        <div class="image-solid-cover"></div>
-      </div>
-
-      <!-- Right Content -->
-      <div data-w-id="bf155e74-cfc3-bd2f-8ec2-254e3f9a0543"
-        style="-webkit-transform:translate3d(40px,0,0);opacity:0"
-        class="home-about-us-box">
-
-        <!-- Logo -->
+      <div class="home-about-us-box" style="opacity: 1 !important; transform: none !important;">
         <div class="flex items-center justify-center w-full mb-4">
           <img src="./Assets/galaxy logo.png" class="w-[120px]" alt="Galaxy Advertising Logo">
         </div>
 
-        <!-- About Text -->
         <p class="paragraph home-about-us"
-           data-en="Galaxy Advertising is a creative advertising and event solutions company delivering innovative ideas, premium printing, branding, and promotional services that help brands stand out."
-           data-ar="جالاكسي للإعلان هي شركة متخصصة في الحلول الإعلانية وتنظيم الفعاليات، تقدم أفكارًا إبداعية وخدمات طباعة متميزة وبناء العلامات التجارية والحلول الترويجية التي تساعد العلامات التجارية على التميز.">
-          جالاكسي للإعلان هي شركة متخصصة في الحلول الإعلانية وتنظيم الفعاليات، تقدم أفكارًا إبداعية وخدمات طباعة متميزة وبناء العلامات التجارية والحلول الترويجية التي تساعد العلامات التجارية على التميز.
+           data-en="Galaxy Advertising is a creative advertising and event solutions company..."
+           data-ar="جالاكسي للإعلان هي شركة متخصصة...">
+           جالاكسي للإعلان هي شركة متخصصة في الحلول الإعلانية وتنظيم الفعاليات...
         </p>
 
-        <!-- Buttons -->
         <div class="lg:flex">
           <div class="_2-buttons home-about-us">
-
-            <a href="#services"
-               class="button-primary home-about-us w-button text-[14px]">
+            <a href="#services" class="button-primary home-about-us w-button text-[14px]">
               <i class="bi bi-megaphone mx-2"></i>
-              <span data-en="Our Services" data-ar="خدماتنا">Our Servicesss</span>
+              <span>Our Services</span>
             </a>
-
             <div class="space _2-buttons"></div>
-
-            <a href="#contact"
-               class="button-secondary home-about-us w-button text-[14px]">
+            <a href="#contact" class="button-secondary home-about-us w-button text-[14px]">
               <i class="bi bi-envelope mx-2"></i>
-              <span data-en="Contact Us" data-ar="تواصل معنا">Contact Us</span>
+              <span>Contact Us</span>
             </a>
-
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </section>
-
+<script>
+  window.addEventListener('load', function() {
+    const aboutSection = document.getElementById('about-us');
+    if (aboutSection) {
+      // This removes all hidden styles Webflow might have added
+      const elements = aboutSection.querySelectorAll('*');
+      elements.forEach(el => {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+        el.style.visibility = "visible";
+      });
+    }
+  });
+</script>
 
     <section class="relative   bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden" id="aboutsection">
 <!-- Promo Section: Galaxy Advertising -->
