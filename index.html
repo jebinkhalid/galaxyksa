@@ -457,8 +457,39 @@ html {
       font-variant-numeric: tabular-nums; /* Prevents the page from shaking while counting */
     will-change: contents;
     }
+@media (max-width: 767px) {
+
+  /* Force services to appear */
+  #services,
+  .home-practice-areas-grid {
+    opacity: 1 !important;
+    transform: none !important;
+    display: grid !important;
+    visibility: visible !important;
+  }
+
+  /* Force testimonials to appear */
+  .section.testimonials,
+  .testimonials-wrapper,
+  .w-tab-pane {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+}
+@media (max-width: 767px) {
+  .home-practice-areas-grid,
+  .testimonials-wrapper,
+  .testimonial-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 
   </style>
+  
   
 </head>
 
@@ -1032,8 +1063,9 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
       })();
     </script>
 
-   <div data-w-id="9df34758-81ac-b5b3-a1d6-eb91e41492b5" class="w-layout-grid home-practice-areas-grid" id="services">
-
+<section class="section services-section">
+  <div class="container-default w-container">
+    <div class="w-layout-grid home-practice-areas-grid" id="services">
   <!-- Advertising (Indoor & Outdoor) -->
   <div class="card practice-area-card transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
     <div class="image-wrapper practice-area-card-icon-wrapper flex items-center justify-center">
@@ -1104,11 +1136,12 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
 
 
 </div>
+  </div>
+</section>
 
 
 
-
-   <section class="section testimonials" id="section testimonials">
+   <section class="section testimonials" id="testimonials">
   <div data-w-id="b401b05d-bff4-eec9-2e25-1ebfdff9effd" class="container-medium-665px testimonials">
 
     <style>
