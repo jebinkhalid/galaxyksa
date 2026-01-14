@@ -454,8 +454,28 @@ html {
       font-variant-numeric: tabular-nums; /* consistent digit widths */
       -webkit-font-feature-settings: "tnum" 1; /* fallback for older WebKit */
       font-feature-settings: "tnum" 1;
+      font-variant-numeric: tabular-nums; /* Prevents the page from shaking while counting */
+    will-change: contents; /* Tells the browser to optimize this for changes */
     }
+    /* Show everything that Webflow tried to hide */
+.image-wrapper, .home-about-us-box, .hero-content, section, div {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    display: block; /* or flex if that was the layout */
+}
   </style>
+  <script>
+  const menuBtn = document.querySelector('.menu-button'); // check your class name
+  const navMenu = document.querySelector('.nav-menu');
+  
+  if(menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      // Add a simple CSS class to show/hide the menu
+    });
+  }
+</script>
 </head>
 
 <body class="bg-neutral-200 overflow-x-hidden md:overflow-x-visible">
