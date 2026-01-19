@@ -1,11 +1,9 @@
 {
+  "cleanUrls": true,
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        { "type": "protocol", "value": "http" }
-      ],
-      "destination": "https://galaxyska.com/$1",
+      "source": "/index.html",
+      "destination": "/",
       "permanent": true
     }
   ]
