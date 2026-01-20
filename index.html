@@ -436,6 +436,7 @@ html {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
+  border-radius:30px;
 }
 
 /* Prevent the "Flash of Black" on mobile */
@@ -725,7 +726,7 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
         </div>
 
         <!-- Main Heading -->
-        <div class="space-y-4">
+        <div class="space-y-4 text-center lg:text-left">
           <h1 class="text-4xl font-bold leading-tight text-[#1f2937]
           md:text-5xl lg:text-6xl xl:text-7xl
           opacity-0 animate-slide-up animate-delay-400">
@@ -758,9 +759,9 @@ bg-gradient-to-br from-[#f5faff] via-[#eef6fb] to-white pt-8 md:pt-12">
 <div class="relative lg:pl-8 flex justify-end">
   <div class="relative w-full max-w-[520px] aspect-[4/5] md:h-[560px]">
 
-    <div class="absolute inset-0 angled-shape bg-[#87CEEB] shadow-[0_20px_60px_rgba(135,206,235,0.45)]"></div>
+    <div class="absolute inset-0 angled-shape bg-[#87CEEB] shadow-[0_20px_60px_rgba(135,206,235,0.45)]" style="border-radius: 30px;"></div>
 
-    <div class="absolute inset-[8px] angled-shape overflow-hidden bg-slate-200"> <img
+    <div class="absolute inset-[8px]  overflow-hidden bg-slate-200" style="border-radius: 30px;"> <img
   src="Assets/empty-billboard-metropolis-city.jpg"
   alt="Galaxy Advertising Preview"
   loading="eager"
